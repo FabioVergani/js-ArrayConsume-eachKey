@@ -1,4 +1,13 @@
 
+//#
+(function(e,f){
+ e.Consume=f.bind({p:'pop'});
+ e.ConsumeTopDown=f.bind({p:'shift'});
+})(Array,function(o,f){var e,p=this.p,m=[];while(e=o[p]()){f(e);m.push(e)};return m});
+//+
+function eachKey(o,f){return Array.Consume(Object.keys(o),f)};
+
+------------------------
 
 //147
 (function(e,f){
